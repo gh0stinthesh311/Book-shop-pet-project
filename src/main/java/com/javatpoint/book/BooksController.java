@@ -10,20 +10,17 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-
 @RestController
 public class BooksController
 {
-    //autowire the BooksService class
     @Autowired
     BooksService booksService;
-    //creating a get mapping that retrieves all the books detail from the database
     @GetMapping("/books")
     private List<Books> getAllBooks()
     {
         return booksService.getAllBooks();
     }
-    //creating a get mapping that retrieves the detail of a specific book
+
     @GetMapping("/books/{bookid}")
     private Books getBooks(@PathVariable("bookid") int bookid)
     {

@@ -8,7 +8,6 @@ import jakarta.persistence.Table;
 @Table
 public class Books
 {
-    //Defining book id as primary key
     @Id
     @Column
     private int id;
