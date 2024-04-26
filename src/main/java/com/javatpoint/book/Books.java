@@ -11,7 +11,7 @@ public class Books
     //Defining book id as primary key
     @Id
     @Column
-    private int bookid;
+    private int id;
     @Column
     private String title;
     @Column
@@ -19,12 +19,12 @@ public class Books
     @Column
     private int price;
 
-    public int getBookid() {
-        return bookid;
+    public int getId() {
+        return id;
     }
 
-    public void setBookid(int bookid) {
-        this.bookid = bookid;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getTitle() {

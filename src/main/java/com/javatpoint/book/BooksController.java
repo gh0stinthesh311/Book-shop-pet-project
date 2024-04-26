@@ -40,7 +40,7 @@ public class BooksController
     private int saveBook(@RequestBody Books books)
     {
         booksService.saveOrUpdate(books);
-        return books.getBookid();
+        return books.getId();
     }
     //creating put mapping that updates the book detail
     @PutMapping("/book")

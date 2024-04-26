@@ -1,0 +1,3 @@
+add quantity
+add caterogy id 
+add author
