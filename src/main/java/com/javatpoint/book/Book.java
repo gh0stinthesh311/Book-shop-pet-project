@@ -3,10 +3,10 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-//mark class as an Entity
+
 @Entity
 @Table
-public class Books
+public class Book
 {
     @Id
     @Column

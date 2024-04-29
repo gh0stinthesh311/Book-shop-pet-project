@@ -11,37 +11,37 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class BooksController
+public class BookController
 {
     @Autowired
-    BooksService booksService;
+    BookService booksService;
     @GetMapping("/books")
-    private List<Books> getAllBooks()
+    private List<Book> getAllBooks()
     {
         return booksService.getAllBooks();
     }
 
     @GetMapping("/books/{bookid}")
-    private Books getBooks(@PathVariable("bookid") int bookid)
+    private Book getBooks(@PathVariable("bookid") int bookid)
     {
         return booksService.getBooksById(bookid);
     }
-    //creating a delete mapping that deletes a specified book
+
     @DeleteMapping("/books/{bookid}")
     private void deleteBook(@PathVariable("bookid") int bookid)
     {
         booksService.delete(bookid);
     }
-    //creating post mapping that post the book detail in the database
-    @PostMapping("/book")
-    private int saveBook(@RequestBody Books books)
+
+    @PostMapping("/books")
+    private int saveBook(@RequestBody Book books)
     {
         booksService.saveOrUpdate(books);
         return books.getId();
     }
-    //creating put mapping that updates the book detail
-    @PutMapping("/book")
-    private Books update(@RequestBody Books books)
+
+    @PutMapping("/books")
+    private Book update(@RequestBody Book books)
     {
         booksService.saveOrUpdate(books);
         return books;
