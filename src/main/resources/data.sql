@@ -1,3 +1,10 @@
-INSERT INTO books (title, author_id, price) VALUES ('Book 1', 'Author 1', 20);
-INSERT INTO books (title, author_id, price) VALUES ('Book 2', 'Author 2', 25);
-INSERT INTO books (title, author_id, price) VALUES ('Book 3', 'Author 3', 30);
+INSERT INTO books (title, author_id, price) VALUES ('To Kill a Mockingbird', 'Harper Lee', 20);
+INSERT INTO books (title, author_id, price) VALUES ('The Great Gatsby', 'F. Scott Fitzgerald', 25);
+INSERT INTO books (title, author_id, price) VALUES ('1984', 'George Orwell', 30);
+INSERT INTO books (title, author_id, price) VALUES ('Pride and Prejudice', 'Jane Austen', 35);
+INSERT INTO books (title, author_id, price) VALUES ('The Catcher in the Rye', 'J.D. Salinger', 40);
+INSERT INTO books (title, author_id, price) VALUES ('To Kill a Mockingbird', 'Harper Lee', 45);
+INSERT INTO books (title, author_id, price) VALUES ('The Hobbit', 'J.R.R. Tolkien', 50);
+INSERT INTO books (title, author_id, price) VALUES ('Harry Potter and the Philosopher''s Stone', 'J.K. Rowling', 55);
+INSERT INTO books (title, author_id, price) VALUES ('The Lord of the Rings', 'J.R.R. Tolkien', 60);
+INSERT INTO books (title, author_id, price) VALUES ('Animal Farm', 'George Orwell', 65);

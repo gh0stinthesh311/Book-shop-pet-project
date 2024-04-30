@@ -1,4 +1,4 @@
-package com.javatpoint.springbootcrudoperation;
+package io.github.soydivision.springbootcrudoperation;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

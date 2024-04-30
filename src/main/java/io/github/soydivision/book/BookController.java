@@ -1,4 +1,4 @@
-package com.javatpoint.book;
+package io.github.soydivision.book;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +10,7 @@ public class BookController
 {
     @Autowired
     BookService booksService;
+
     @GetMapping("/books")
     private List<Book> getAllBooks()
     {

@@ -1,4 +1,4 @@
-package com.javatpoint.book;
+package io.github.soydivision.book;
 
 import java.util.ArrayList;
 import java.util.List;

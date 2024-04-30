@@ -1,4 +1,4 @@
-package com.javatpoint.book;
+package io.github.soydivision.book;
 
 import org.springframework.data.repository.CrudRepository;
 
