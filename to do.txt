@@ -1,3 +1,5 @@
-add quantity
-add caterogy id 
-add author
+Add author (can have many books)
+
+add quantity for books 
+add caterogy (can have many books)   
+

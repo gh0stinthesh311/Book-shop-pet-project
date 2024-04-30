@@ -1,4 +1,3 @@
-INSERT INTO book (id, title, author_id, price)
-VALUES (1, 'Design Patterns: Elements of Reusable Object-Oriented Software', 10, 29.99),
-       (2, 'Clean Code: A Handbook of Agile Software Craftsmanship', 15, 34.99),
-       (3, 'Head First Java', 20, 39.99);
+INSERT INTO books (title, author_id, price) VALUES ('Book 1', 'Author 1', 20);
+INSERT INTO books (title, author_id, price) VALUES ('Book 2', 'Author 2', 25);
+INSERT INTO books (title, author_id, price) VALUES ('Book 3', 'Author 3', 30);

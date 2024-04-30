@@ -1,24 +1,24 @@
 package com.javatpoint.book;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
-@Table
-public class Book
-{
+@Table(name = "books")
+public class Book {
+
     @Id
-    @Column
-    private int id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
+
     @Column
     private String title;
+
     @Column
     private String author_id;
+
     @Column
     private int price;
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 

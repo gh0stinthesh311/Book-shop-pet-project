@@ -2,12 +2,16 @@ package com.javatpoint.book;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import jakarta.persistence.EntityManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class BookService
 {
+    EntityManager entityManager;
+
     @Autowired
     BooksRepository booksRepository;
 
