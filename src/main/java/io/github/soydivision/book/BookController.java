@@ -2,41 +2,42 @@ package io.github.soydivision.book;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/books")
 public class BookController
 {
     @Autowired
     BookService booksService;
 
-    @GetMapping("/books")
+    @GetMapping
     private List<Book> getAllBooks()
     {
         return booksService.getAllBooks();
     }
 
-    @GetMapping("/books/{bookid}")
-    private Book getBook(@PathVariable("bookid") int bookid)
+    @GetMapping("/{id}")
+    private Book getBook(@PathVariable("id") int id)
     {
-        return booksService.getBookById(bookid);
+        return booksService.getBookById(id);
     }
 
-    @DeleteMapping("/books/{bookid}")
-    private void deleteBook(@PathVariable("bookid") int bookid)
+    @DeleteMapping("/{id}")
+    private void deleteBook(@PathVariable("id") int id)
     {
-        booksService.delete(bookid);
+        booksService.delete(id);
     }
 
-    @PostMapping("/books")
+    @PostMapping
     private long saveBook(@RequestBody Book book)
     {
         booksService.saveOrUpdate(book);
         return book.getId();
     }
 
-    @PutMapping("/books")
+    @PutMapping
     private Book updateBook(@RequestBody Book book)
     {
         booksService.saveOrUpdate(book);
