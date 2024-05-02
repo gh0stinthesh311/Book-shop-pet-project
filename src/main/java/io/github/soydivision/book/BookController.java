@@ -18,9 +18,9 @@ public class BookController
     }
 
     @GetMapping("/books/{bookid}")
-    private Book getBooks(@PathVariable("bookid") int bookid)
+    private Book getBook(@PathVariable("bookid") int bookid)
     {
-        return booksService.getBooksById(bookid);
+        return booksService.getBookById(bookid);
     }
 
     @DeleteMapping("/books/{bookid}")
@@ -30,16 +30,16 @@ public class BookController
     }
 
     @PostMapping("/books")
-    private long saveBook(@RequestBody Book books)
+    private long saveBook(@RequestBody Book book)
     {
-        booksService.saveOrUpdate(books);
-        return books.getId();
+        booksService.saveOrUpdate(book);
+        return book.getId();
     }
 
     @PutMapping("/books")
-    private Book update(@RequestBody Book books)
+    private Book updateBook(@RequestBody Book book)
     {
-        booksService.saveOrUpdate(books);
-        return books;
+        booksService.saveOrUpdate(book);
+        return book;
     }
 }
