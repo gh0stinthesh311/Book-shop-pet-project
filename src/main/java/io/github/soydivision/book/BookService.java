@@ -20,7 +20,7 @@ public class BookService
         return books;
     }
 
-    public Book getBookById(int id)
+    public Book getBookById(Long id)
     {
         return booksRepository.findById(id).get();
     }
@@ -30,7 +30,7 @@ public class BookService
         booksRepository.save(books);
     }
 
-    public void delete(int id)
+    public void delete(Long id)
     {
         booksRepository.deleteById(id);
     }

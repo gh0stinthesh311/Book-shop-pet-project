@@ -19,13 +19,13 @@ public class BookController
     }
 
     @GetMapping("/{id}")
-    private Book getBook(@PathVariable("id") int id)
+    private Book getBook(@PathVariable Long id)
     {
         return booksService.getBookById(id);
     }
 
     @DeleteMapping("/{id}")
-    private void deleteBook(@PathVariable("id") int id)
+    private void deleteBook(@PathVariable Long id)
     {
         booksService.delete(id);
     }
