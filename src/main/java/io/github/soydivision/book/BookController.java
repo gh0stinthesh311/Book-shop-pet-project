@@ -1,18 +1,18 @@
 package io.github.soydivision.book;
 
-import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
-@RequestMapping("/api/books")
+@RequestMapping("/api/book")
 public class BookController
 {
     @Autowired
     BookService booksService;
 
-    @GetMapping
+    @GetMapping("/all")
     private List<Book> getAllBooks()
     {
         return booksService.getAllBooks();
