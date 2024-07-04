@@ -6,6 +6,7 @@
 //import java.util.Set;
 //
 //@Entity
+//@Table(name = "authors")
 //public class Author {
 //
 //    @Id
@@ -17,7 +18,6 @@
 //
 //    @OneToMany(mappedBy = "author", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 //    private Set<Book> books;
-//
 //
 //    public Author() {
 //    }
@@ -34,7 +34,7 @@
 //        this.id = id;
 //    }
 //
-//    public String getName() {s
+//    public String getName() {
 //        return name;
 //    }
 //

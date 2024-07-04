@@ -74,10 +74,6 @@ ehthumbs.db
 .idea/jsLibraryMappings.xml
 .idea/editor.xml
 
-# Sensitive or environment-specific files
-application.properties
-application.yml
-
 
 
 
