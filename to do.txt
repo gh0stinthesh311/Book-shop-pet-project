@@ -1,5 +1,6 @@
 Add author (can have many books)
 
-add quantity for books 
+add quantity for books in separate table
 add caterogy (can have many books)   
 
+add orders logic

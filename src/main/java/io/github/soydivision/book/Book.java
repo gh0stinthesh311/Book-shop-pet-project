@@ -1,22 +1,43 @@
 package io.github.soydivision.book;
+import io.github.soydivision.author.Author;
+import io.github.soydivision.order.Order;
 import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity
 @Table(name = "books")
 public class Book {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private long id;
 
     @Column
     private String title;
 
     @Column
-    private String author_id;
-
-    @Column
     private int price;
+
+    @ManyToMany
+    @JoinTable(
+            name = "AUTHOR_BOOK_MAPPING",
+            joinColumns = @JoinColumn(name = "book_id"),
+            inverseJoinColumns = @JoinColumn(name = "author_id"))
+    private List<Author> authors;
+
+    @ManyToMany
+    @JoinTable(
+            name = "order_book_mapping",
+            joinColumns = @JoinColumn(name = "book_id"),
+            inverseJoinColumns = @JoinColumn(name = "order_id"))
+    private List<Order> orders; // Hibernate uses its own specific implementations of collection types. No need to explicitly mention one here.
+
+    public Book() {}
+
+    public Book(String title) {
+        this.title = title;
+    }
 
     public long getId() {
         return id;
@@ -34,19 +55,19 @@ public class Book {
         this.title = title;
     }
 
-    public String getAuthor_id() {
-        return author_id;
-    }
-
-    public void setAuthor_id(String author_id) {
-        this.author_id = author_id;
-    }
-
     public int getPrice() {
         return price;
     }
 
     public void setPrice(int price) {
         this.price = price;
+    }
+
+    public List<Author> getAuthors() {
+        return authors;
+    }
+
+    public void setAuthors(List<Author> authors) {
+        this.authors = authors;
     }
 }

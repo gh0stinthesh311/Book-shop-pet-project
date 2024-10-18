@@ -28,3 +28,6 @@ INSERT INTO books (title, author_id, price) VALUES ('The Brothers Karamazov', 'F
 INSERT INTO books (title, author_id, price) VALUES ('Les Misérables', 'Victor Hugo', 95);
 INSERT INTO books (title, author_id, price) VALUES ('One Hundred Years of Solitude', 'Gabriel Garcia Marquez', 85);
 INSERT INTO books (title, author_id, price) VALUES ('The Divine Comedy', 'Dante Alighieri', 100);
+
+INSERT INTO authors (name) VALUES ('George Orwell');
+INSERT INTO authors (name) VALUES ('J.K. Rowling');
