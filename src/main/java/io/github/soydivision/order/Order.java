@@ -1,7 +1,6 @@
 package io.github.soydivision.order;
 
 import io.github.soydivision.book.Book;
-//import io.github.soydivision.order_item.OrderItem;
 import jakarta.persistence.*;
 
 import java.util.List;

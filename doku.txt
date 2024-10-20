@@ -1,0 +1,16 @@
+Laymen Spring boot journey.
+Based Spring boot dev guide.
+From 0 to crud master just under some funtime. 
+
+
+
+This is not aimed to be exhaustive explanation of unGodly obfuscated Java crud builder 
+called Spring Boot.
+In this very gentle introduction I will aim to provide the most basic information required
+to get the hang of it, get a job and flushing your life down the corporate IT toilet. 
+
+The project struct
+PS is pinnacle of humanity thinking capabilities derived from millions of brain hours spent on finding the right file in dir. You should follow this blindly and accept wholeheartidly as government or weather.
+
+The project set up.
+In order to run this proj please have notepad, JVM SDK and beautfill patience. Patience is of highest virtues.
