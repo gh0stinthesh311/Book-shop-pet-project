@@ -37,7 +37,7 @@ public class AuthorController {
         return author.getId();
     }
 
-    @PutMapping
+    @PutMapping("/{id}")
     private Author updateAuthor(@RequestBody Author author)
     {
         authorService.saveOrUpdate(author);
