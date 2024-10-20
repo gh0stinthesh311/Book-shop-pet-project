@@ -37,10 +37,11 @@ public class BookController
         return book.getId();
     }
 
-    @PutMapping
-    private Book updateBook(@RequestBody Book book)
-    {
+    @PutMapping("/{id}")
+    private Book updateBook(@PathVariable Long id, @RequestBody Book book) {
+        book.setId(id); // Ensure the ID matches the path variable, otherwise you can pass arbitrary Id in request body.
         booksService.saveOrUpdate(book);
         return book;
     }
+
 }

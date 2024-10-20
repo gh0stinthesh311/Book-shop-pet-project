@@ -38,8 +38,9 @@ public class AuthorController {
     }
 
     @PutMapping("/{id}")
-    private Author updateAuthor(@RequestBody Author author)
+    private Author updateAuthor(@PathVariable Long id, @RequestBody Author author)
     {
+        author.setId(id); // Ensure the ID matches the path variable, otherwise you can pass arbitrary Id in request body.
         authorService.saveOrUpdate(author);
         return author;
     }
