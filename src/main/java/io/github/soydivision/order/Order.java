@@ -19,7 +19,7 @@ public class Order {
 
     @ManyToMany
     @JoinTable(
-            name = "order_book_mapping", // Name of the join table
+            name = "ORDER_BOOK_MAPPING", // Name of the join table
             joinColumns = @JoinColumn(name = "order_id"), // Foreign key to the Order entity
             inverseJoinColumns = @JoinColumn(name = "book_id") // Foreign key to the Book entity
     )

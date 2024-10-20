@@ -28,10 +28,11 @@ public class Book {
 
     @ManyToMany
     @JoinTable(
-            name = "order_book_mapping",
+            name = "ORDER_BOOK_MAPPING",
             joinColumns = @JoinColumn(name = "book_id"),
             inverseJoinColumns = @JoinColumn(name = "order_id"))
     private List<Order> orders; // Hibernate uses its own specific implementations of collection types. No need to explicitly mention one here.
+
 
     public Book() {}
 
@@ -69,5 +70,13 @@ public class Book {
 
     public void setAuthors(List<Author> authors) {
         this.authors = authors;
+    }
+
+    public List<Order> getOrders() {
+        return orders;
+    }
+
+    public void setOrders(List<Order> orders) {
+        this.orders = orders;
     }
 }
