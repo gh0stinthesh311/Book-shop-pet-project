@@ -31,3 +31,5 @@ INSERT INTO books (title, author_id, price) VALUES ('The Divine Comedy', 'Dante 
 
 INSERT INTO authors (name) VALUES ('George Orwell');
 INSERT INTO authors (name) VALUES ('J.K. Rowling');
+
+

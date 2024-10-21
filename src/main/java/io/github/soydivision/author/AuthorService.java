@@ -1,6 +1,4 @@
 package io.github.soydivision.author;
-import io.github.soydivision.book.Book;
-import io.github.soydivision.book.BooksRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,7 +19,7 @@ public class AuthorService
         return author;
     }
 
-    public Author getBookById(Long id)
+    public Author getAuthorById(Long id)
     {
         return authorRepository.findById(id).get();
     }
