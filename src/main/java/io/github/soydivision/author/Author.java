@@ -1,4 +1,5 @@
 package io.github.soydivision.author;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.github.soydivision.book.Book;
 import jakarta.persistence.*;
 import java.util.List;
@@ -15,6 +16,7 @@ public class Author {
     private String name;
 
     @ManyToMany
+    @JsonIgnore
     @JoinTable(
             name = "AUTHOR_BOOK_MAPPING",
             joinColumns = @JoinColumn(name = "author_id"),
