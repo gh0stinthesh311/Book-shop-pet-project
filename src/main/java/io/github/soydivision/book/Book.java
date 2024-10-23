@@ -1,4 +1,5 @@
 package io.github.soydivision.book;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.github.soydivision.author.Author;
 import io.github.soydivision.order.Order;
@@ -21,7 +22,7 @@ public class Book {
     private int price;
 
     @ManyToMany
-    @JsonIgnore
+    @JsonBackReference
     @JoinTable(
             name = "AUTHOR_BOOK_MAPPING",
             joinColumns = @JoinColumn(name = "book_id"),

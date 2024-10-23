@@ -1,0 +1,109 @@
+Add author (can have many books)
+
+add quantity for books in separate table
+add caterogy (can have many books)   
+
+add orders logic
+
+
+books should not repeat in author
+when posting the book to author, both should be validated
+
+Create, Update, and Delete endpoints for Authors and Books.
+
+Add search functionality (e.g., by book title, author name, genre).
+
+Implement sorting and filtering for books (e.g., by publication date, price, or rating).
+
+Add rating for book
+Add rating for author
+
+
+Add user authentication (using Spring Security with JWT or OAuth2):
+
+
+Differentiate between regular users and admin users (admins can create/update/delete books, regular users can browse and place orders).
+
+shopping cart
+
+
+
+For developing your book shop back-end project further, you can follow this roadmap to enhance functionality, scalability, and maintainability:
+1. Extend CRUD Operations
+
+    Author & Book:
+        Add Create, Update, and Delete endpoints for Authors and Books.
+        Implement pagination for the "Get All" endpoint to handle large datasets efficiently.
+        Add search functionality (e.g., by book title, author name, genre).
+        Implement sorting and filtering for books (e.g., by publication date, price, or rating).
+
+    Order & OrderItem:
+        Implement Create, Update, and Delete operations for Orders and OrderItems.
+        Add validation (e.g., ensure OrderItems have valid quantities and prices).
+        Create custom queries (e.g., retrieve orders by user, date range, or order status).
+
+2. Authentication & Authorization
+
+    Add user authentication (using Spring Security with JWT or OAuth2):
+        Differentiate between regular users and admin users (admins can create/update/delete books, regular users can browse and place orders).
+    Implement role-based authorization to restrict access to certain endpoints (e.g., only admins can delete a book).
+
+3. Shopping Cart Functionality
+
+    Implement a shopping cart where users can add books before placing an order.
+        Design the cart as a separate entity or store it in session data.
+        Allow users to view, update, and remove items from the cart.
+
+4. Order Processing
+
+    Build an order creation process:
+        When a user checks out, create an Order entity and associate it with the corresponding OrderItems.
+        Track the order status: pending, shipped, delivered, cancelled.
+        Implement order validation (e.g., ensuring stock availability before placing an order).
+
+5. Payment Integration
+
+    Integrate a payment gateway (e.g., Stripe or PayPal) to handle payment processing.
+    Ensure secure transaction handling and payment status tracking (success, failure, etc.).
+
+6. Inventory Management
+
+    Create a system to manage book inventory.
+        Deduct quantities from inventory when an order is placed.
+        Send alerts or block orders if inventory is insufficient.
+
+7. User Profiles and Order History
+
+    Implement user profiles with order history:
+        Each user can view their past orders, order details, and order statuses.
+    Add functionality for order cancellations or returns.
+
+8. Rating & Reviews System
+
+    Allow users to rate and review books.
+        Store ratings and reviews in the database.
+        Implement review moderation for admin users.
+
+9. Database Enhancements
+
+    Improve your database schema:
+        Consider using caching (e.g., Redis) for frequently accessed data (like books and authors).
+        Optimize query performance for large datasets (using indexes, optimizing relationships, etc.).
+
+10. Unit Testing and Integration Testing
+
+    Write comprehensive unit tests for your service and repository layers.
+    Add integration tests to ensure your APIs work as expected in various scenarios (successful calls, validation errors, etc.).
+
+11. Deploy the Application
+
+    Consider containerizing your application using Docker.
+    Deploy the application on cloud platforms like AWS or Heroku for real-world usage.
+    Add continuous integration (CI) pipelines (e.g., GitHub Actions, Jenkins) for automated testing and deployment.
+
+12. Documentation
+
+    Write API documentation (using Swagger or OpenAPI) so others (or future you) can easily understand and consume the API.
+    Document the overall architecture and explain core entities and relationships.
+
+This roadmap covers functional improvements, security, performance, and deployment. Let me know if you’d like more details on any of these steps!
