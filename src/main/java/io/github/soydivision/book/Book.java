@@ -22,7 +22,7 @@ public class Book {
     private int price;
 
     @ManyToMany
-    @JsonBackReference
+    @JsonBackReference // This is to avoid infinite loop. This is backward part of reference.
     @JoinTable(
             name = "AUTHOR_BOOK_MAPPING",
             joinColumns = @JoinColumn(name = "book_id"),
