@@ -21,7 +21,7 @@ public class Author {
             name = "AUTHOR_BOOK_MAPPING",
             joinColumns = @JoinColumn(name = "author_id"),
             inverseJoinColumns = @JoinColumn(name = "book_id"))
-    private List<Book> books;// We could've used Set here, but Set<T> does not allow duplicates.
+    private List<Book> books;// no need to specify implementation, Hibernate will use its own
 
     public Author() {
     }

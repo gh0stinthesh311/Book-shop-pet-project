@@ -54,6 +54,13 @@ public class AuthorController {
         authorService.saveOrUpdate(author);
         return ResponseEntity.ok("Book " + book.getTitle() + " has been added to " + author.getName());
     }
+
+    //To do
+//    @DeleteMapping("/{authorId}/book/{bookId}")
+//    public ResponseEntity<?> removeBookFromAuthor(@PathVariable Long authorId, @PathVariable Long bookId) {
+//        // Logic to remove the book from the author
+//
+//    }
 }
 
 

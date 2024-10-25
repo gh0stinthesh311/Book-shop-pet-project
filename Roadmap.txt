@@ -1,7 +1,28 @@
+Add response entities
+
+
 add quantity for books in separate table
 add caterogy (can have many books)   
 
 add orders logic
+
+
+### Potential Additional Endpoints (Based on the `Book` Entity):
+
+- **`GET /api/book/{bookId}/authors`**: Get all authors for a specific book  
+- **`POST /api/book/{bookId}/author/{authorId}`**: Add an author to a book  
+- **`DELETE /api/book/{bookId}/author/{authorId}`**: Remove an author from a book  
+- **`GET /api/book/{bookId}/category`**: Get the category of a specific book  
+- **`PUT /api/book/{bookId}/category/{categoryId}`**: Set or update the category of a book  
+- **`GET /api/book/{bookId}/orders`**: Get all orders that include a specific book  
+
+---
+
+### Notes:
+
+- **Circular References**: Ensure `@JsonBackReference` is correctly applied to avoid infinite loops in responses.
+- **Error Handling**: Use appropriate response codes and messages for cases where entities don’t exist or associations are invalid.
+- **Testing**: Make sure the joins (many-to-many and many-to-one) are correctly populated, as these can be error-prone without validations.
 
 
 books should not repeat in author
