@@ -13,32 +13,32 @@ public class BookController
     BookService booksService;
 
     @GetMapping("/all")
-    private List<Book> getAllBooks()
+    public List<Book> getAllBooks()
     {
         return booksService.getAllBooks();
     }
 
     @GetMapping("/{id}")
-    private Book getBook(@PathVariable Long id)
+    public Book getBook(@PathVariable Long id)
     {
         return booksService.getBookById(id);
     }
 
     @DeleteMapping("/{id}")
-    private void deleteBook(@PathVariable Long id)
+    public void deleteBook(@PathVariable Long id)
     {
         booksService.delete(id);
     }
 
     @PostMapping
-    private long saveBook(@RequestBody Book book)
+    public long saveBook(@RequestBody Book book)
     {
         booksService.saveOrUpdate(book);
         return book.getId();
     }
 
     @PutMapping("/{id}")
-    private Book updateBook(@PathVariable Long id, @RequestBody Book book) {
+    public Book updateBook(@PathVariable Long id, @RequestBody Book book) {
         book.setId(id); // Ensure the ID matches the path variable, otherwise you can pass arbitrary Id in request body.
         booksService.saveOrUpdate(book);
         return book;

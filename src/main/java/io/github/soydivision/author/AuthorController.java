@@ -19,28 +19,28 @@ public class AuthorController {
     private BookService bookService;
 
     @GetMapping("/all")
-    private List<Author> getAllBooks() {
+    public List<Author> getAllBooks() {
         return authorService.getAllBooks();
     }
 
     @GetMapping("/{id}")
-    private Author getBook(@PathVariable Long id) {
+    public Author getBook(@PathVariable Long id) {
         return authorService.getAuthorById(id);
     }
 
     @DeleteMapping("/{id}")
-    private void deleteBook(@PathVariable Long id) {
+    public void deleteBook(@PathVariable Long id) {
         authorService.delete(id);
     }
 
     @PostMapping
-    private long saveAuthor(@RequestBody Author author) {
+    public long saveAuthor(@RequestBody Author author) {
         authorService.saveOrUpdate(author);
         return author.getId();
     }
 
     @PutMapping("/{id}")
-    private Author updateAuthor(@PathVariable Long id, @RequestBody Author author) {
+    public Author updateAuthor(@PathVariable Long id, @RequestBody Author author) {
         author.setId(id); // Ensure the ID matches the path variable, otherwise you can pass arbitrary Id in request body.
         authorService.saveOrUpdate(author);
         return author;
