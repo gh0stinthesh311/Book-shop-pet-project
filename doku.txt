@@ -13,6 +13,6 @@ The project struct
 PS is pinnacle of humanity thinking capabilities derived from millions of brain hours spent on finding the right file in dir. You should follow this blindly and accept wholeheartidly as government or weather.
 
 The project set up.
-In order to run this proj please have notepad, JVM SDK and beautfill patience. Patience is of highest virtues.
+In order to run this proj please have notepad, JVM SDK and beautfill patience. Patience is of the highest virtues.
 
 // This is test line

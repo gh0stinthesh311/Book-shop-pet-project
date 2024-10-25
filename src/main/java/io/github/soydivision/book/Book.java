@@ -22,7 +22,9 @@ public class Book {
     private int price;
 
     @ManyToOne
-    @JoinColumn(name = "category_id")
+    @JoinTable(name = "BOOK_CATEGORY_MAPPING",
+            joinColumns = @JoinColumn(name = "book_id"),
+            inverseJoinColumns = @JoinColumn(name = "category_id"))
     private Category category;
 
     @ManyToMany
