@@ -28,11 +28,11 @@ API is fairly standard across the entities:
 - `POST /api/author/{authorId}/book/{bookId}`: Add a book to an author
 
 
-- **`GET /api/book/all`**: Get all books  
-- **`GET /api/book/{id}`**: Get a book by ID  
-- **`POST /api/book`**: Create a new book  
-- **`PUT /api/book/{id}`**: Update an existing book  
-- **`DELETE /api/book/{id}`**: Delete a book  
+- `GET /api/book/all`: Get all books  
+- `GET /api/book/{id}`: Get a book by ID  
+- `POST /api/book`: Create a new book  
+- `PUT /api/book/{id}`: Update an existing book  
+- `DELETE /api/book/{id}`: Delete a book  
 
 ## License
 
