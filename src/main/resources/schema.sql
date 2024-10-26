@@ -15,3 +15,11 @@ CREATE TABLE categories (
     id INT AUTO_INCREMENT PRIMARY KEY,
     category VARCHAR(255) NOT NULL
 );
+
+CREATE TABLE AUTHOR_BOOK_MAPPING (
+    author_id INT,
+    book_id INT,
+    PRIMARY KEY (author_id, book_id),
+    FOREIGN KEY (author_id) REFERENCES authors(id),
+    FOREIGN KEY (book_id) REFERENCES books(id)
+);
