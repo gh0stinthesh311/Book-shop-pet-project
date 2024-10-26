@@ -3,7 +3,6 @@ package io.github.soydivision.author;
 import io.github.soydivision.book.Book;
 import io.github.soydivision.book.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -47,12 +46,12 @@ public class AuthorController {
     }
 
     @PostMapping("/{authorId}/book/{bookId}")
-    public ResponseEntity<?> addBookToAuthor(@PathVariable Long authorId, @PathVariable Long bookId) {
+    public Author addBookToAuthor(@PathVariable Long authorId, @PathVariable Long bookId) {
         Author author = authorService.getAuthorById(authorId);
         Book book = bookService.getBookById(bookId);
         author.getBooks().add(book);
         authorService.saveOrUpdate(author);
-        return ResponseEntity.ok("Book " + book.getTitle() + " has been added to " + author.getName());
+        return author;
     }
 
     //To do
