@@ -7,7 +7,7 @@ add orders logic
 ### Potential Additional Endpoints (Based on the `Book` Entity):
 
 - **`GET /api/book/{bookId}/authors`**: Get all authors for a specific book  
-- **`POST /api/book/{bookId}/author/{authorId}`**: Add an author to a book  
+
 - **`DELETE /api/book/{bookId}/author/{authorId}`**: Remove an author from a book  
 - **`GET /api/book/{bookId}/category`**: Get the category of a specific book  
 - **`PUT /api/book/{bookId}/category/{categoryId}`**: Set or update the category of a book  

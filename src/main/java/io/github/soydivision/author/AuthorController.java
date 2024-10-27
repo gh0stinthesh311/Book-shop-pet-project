@@ -54,7 +54,7 @@ public class AuthorController {
         return author;
     }
 
-    //To do
+//    To do
 //    @DeleteMapping("/{authorId}/book/{bookId}")
 //    public ResponseEntity<?> removeBookFromAuthor(@PathVariable Long authorId, @PathVariable Long bookId) {
 //        // Logic to remove the book from the author

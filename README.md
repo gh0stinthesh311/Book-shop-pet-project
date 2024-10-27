@@ -19,15 +19,14 @@ To run this application locally, follow these steps:
 ## API Documentation
 
 API is fairly standard across the entities:   
-
+Author:
 - `GET /api/author/all`: Get all authors
 - `GET /api/author/{id}`: Get an author by ID
 - `POST /api/author`: Create a new author
 - `PUT /api/author/{id}`: Update an existing author  
 - `DELETE /api/author/{id}`: Delete an author
-- `POST /api/author/{authorId}/book/{bookId}`: Add a book to an author
-
-
+- `POST /api/author/{authorId}/book/{bookId}`: Add a book to an author  
+Book:
 - `GET /api/book/all`: Get all books  
 - `GET /api/book/{id}`: Get a book by ID  
 - `POST /api/book`: Create a new book  
