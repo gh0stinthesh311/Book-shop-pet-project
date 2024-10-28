@@ -1,5 +1,6 @@
 package io.github.soydivision.book;
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.github.soydivision.author.Author;
 import io.github.soydivision.book.category.Category;
 import io.github.soydivision.order.Order;
@@ -28,6 +29,7 @@ public class Book {
     private Category category;
 
     @ManyToMany
+//    @JsonIgnore
     @JsonBackReference // This is to avoid infinite loop. This is backward part of reference.
     @JoinTable(
             name = "AUTHOR_BOOK_MAPPING",

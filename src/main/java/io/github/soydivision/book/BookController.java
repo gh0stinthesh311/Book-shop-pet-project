@@ -30,7 +30,7 @@ public class BookController
         booksService.delete(id);
     }
 
-    @PostMapping
+    @PostMapping("/")
     public long saveBook(@RequestBody Book book)
     {
         booksService.saveOrUpdate(book);
@@ -43,5 +43,4 @@ public class BookController
         booksService.saveOrUpdate(book);
         return book;
     }
-
 }

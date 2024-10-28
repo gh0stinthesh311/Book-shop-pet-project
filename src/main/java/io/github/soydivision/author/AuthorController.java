@@ -32,7 +32,7 @@ public class AuthorController {
         authorService.delete(id);
     }
 
-    @PostMapping
+    @PostMapping("/")
     public long saveAuthor(@RequestBody Author author) {
         authorService.saveOrUpdate(author);
         return author.getId();

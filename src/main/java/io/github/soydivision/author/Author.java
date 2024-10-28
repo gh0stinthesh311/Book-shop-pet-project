@@ -1,4 +1,5 @@
 package io.github.soydivision.author;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import io.github.soydivision.book.Book;
 import jakarta.persistence.*;
@@ -16,6 +17,7 @@ public class Author {
     private String name;
 
     @ManyToMany
+//    @JsonIgnore
     @JsonManagedReference // This is to avoid infinite loop. This is forward part of reference.
     @JoinTable(
             name = "AUTHOR_BOOK_MAPPING",

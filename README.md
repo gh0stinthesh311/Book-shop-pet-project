@@ -41,4 +41,5 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 H2 database used for simplicity.  
 Database schema created using Jakarta in-built mechanism of @Entiry classes creation,
-instead of explicit usage of schema.sql.
+instead of explicit usage of schema.sql. Wait a sec. No. In fact the opposite is true. Scheme.sql does the creation,
+and hiber updates the tables according to entities.
