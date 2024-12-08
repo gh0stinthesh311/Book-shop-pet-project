@@ -13,9 +13,6 @@ public class AuthorController {
     @Autowired
     AuthorService authorService;
 
-    @Autowired
-    private BookService bookService;
-
     @GetMapping("/all")
     public List<AuthorDTO> getAllAuthors() {
         return authorService.getAllAuthors();

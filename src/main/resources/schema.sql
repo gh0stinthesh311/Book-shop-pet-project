@@ -11,6 +11,12 @@ CREATE TABLE authors (
     name VARCHAR(255) NOT NULL
 );
 
+CREATE TABLE customers (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL
+);
+
 CREATE TABLE categories (
     id INT AUTO_INCREMENT PRIMARY KEY,
     category VARCHAR(255) NOT NULL

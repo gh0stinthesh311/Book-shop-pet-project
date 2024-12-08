@@ -32,7 +32,14 @@ Book:
 - `POST /api/book`: Create a new book  
 - `PUT /api/book/{id}`: Update an existing book  
 - `DELETE /api/book/{id}`: Delete a book  
-
+Customer:
+- `GET /api/customer/all`: Get all customers
+- `GET /api/customer/{id}`: Get a customer by ID
+- `POST /api/customer/save`: Create a new customer
+- `PUT /api/customer/{id}`: Update an existing customer
+- `DELETE /api/customer/{id}`: Delete a customer
+- `POST /api/customer/{customerId}/book/{bookId}`: Add a book to a customer
+- 
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.

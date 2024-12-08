@@ -5,6 +5,19 @@ INSERT INTO authors (id, name) VALUES (3, 'F. Scott Fitzgerald');
 INSERT INTO authors (id, name) VALUES (4, 'J.K. Rowling');
 INSERT INTO authors (id, name) VALUES (5, 'Jane Austen');
 
+-- Insert customers
+INSERT INTO customers (name, email) VALUES
+('John Doe', 'johndoe@example.com'),
+('Jane Smith', 'janesmith@example.com'),
+('Robert Brown', 'robert.brown@example.net'),
+('Emily Davis', 'emily.davis@example.org'),
+('Michael Wilson', 'michael.wilson@example.com'),
+('Sarah Johnson', 'sarah.johnson@example.co'),
+('David Taylor', 'david.taylor@example.org'),
+('Laura Martinez', 'laura.martinez@example.net'),
+('James Anderson', 'james.anderson@example.edu'),
+('Linda Thompson', 'linda.thompson@example.com');
+
 -- Insert books
 INSERT INTO books (title, author_id, price) VALUES ('To Kill a Mockingbird', 1, 15);
 INSERT INTO books (title, author_id, price) VALUES ('Go Set a Watchman', 1, 20);
