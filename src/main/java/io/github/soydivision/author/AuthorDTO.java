@@ -1,27 +1,10 @@
 package io.github.soydivision.author;
 
-import java.util.List;
-
 public class AuthorDTO {
-    private Long id;
     private String name;
-    private List<Long> bookIds;
 
-    public AuthorDTO() {
-    }
-
-    public AuthorDTO(Long id, String name, List<Long> bookIds) {
-        this.id = id;
+    public AuthorDTO(String name) {
         this.name = name;
-        this.bookIds = bookIds;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public String getName() {
@@ -31,12 +14,32 @@ public class AuthorDTO {
     public void setName(String name) {
         this.name = name;
     }
-
-    public List<Long> getBookIds() {
-        return bookIds;
-    }
-
-    public void setBookIds(List<Long> bookIds) {
-        this.bookIds = bookIds;
-    }
 }
+
+//Constructor Overloading
+//
+//Why:
+//It's simple to implement and avoids adding unnecessary complexity.
+//Fits well when there are a few variations in the data returned by the DTO.
+//Easy to understand and modify as your project evolves.
+//
+//public class UserDTO {
+//    private String name;
+//    private String email;
+//    private String phoneNumber;
+//
+//    // Constructor for basic info
+//    public UserDTO(String name, String email) {
+//        this.name = name;
+//        this.email = email;
+//    }
+//
+//    // Constructor for detailed info
+//    public UserDTO(String name, String email, String phoneNumber) {
+//        this.name = name;
+//        this.email = email;
+//        this.phoneNumber = phoneNumber;
+//    }
+//
+//    // Getters and setters
+//}

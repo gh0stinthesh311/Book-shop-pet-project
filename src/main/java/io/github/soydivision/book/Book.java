@@ -1,4 +1,5 @@
 package io.github.soydivision.book;
+
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.github.soydivision.author.Author;
@@ -45,7 +46,8 @@ public class Book {
     private List<Order> orders; // Hibernate uses its own specific implementations of collection types. No need to explicitly mention one here.
 
 
-    public Book() {}
+    public Book() {
+    }
 
     public Book(String title) {
         this.title = title;

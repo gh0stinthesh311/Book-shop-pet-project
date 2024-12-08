@@ -22,7 +22,7 @@ API is fairly standard across the entities:
 Author:
 - `GET /api/author/all`: Get all authors
 - `GET /api/author/{id}`: Get an author by ID
-- `POST /api/author`: Create a new author
+- `POST /api/author/save`: Create a new author
 - `PUT /api/author/{id}`: Update an existing author  
 - `DELETE /api/author/{id}`: Delete an author
 - `POST /api/author/{authorId}/book/{bookId}`: Add a book to an author  
