@@ -1,5 +1,6 @@
 package io.github.soydivision.customer;
 
+import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,5 +20,10 @@ public class CustomerService {
             allCustomersListDTO.add(new CustomerDTO(customer.getName()));
         }
         return allCustomersListDTO;
+    }
+
+    public CustomerDTO getCustomerById(Long id) {
+        Customer customer = customerRepository.findById(id).orElseThrow(() -> new EntityNotFoundException("No such data"));
+        return new CustomerDTO(customer.getName());
     }
 }

@@ -1,6 +1,5 @@
 package io.github.soydivision.author;
 
-import io.github.soydivision.book.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

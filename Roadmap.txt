@@ -1,5 +1,8 @@
 Move to DTO
 
+Implement MapStruct
+
+
 Make a favorite list for customer
 also add purchased books for customer
 
