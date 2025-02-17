@@ -1,6 +1,10 @@
 Move to DTO
 
+Implement MapStruct
 
+
+Make a favorite list for customer
+also add purchased books for customer
 
 add quantity for books in separate table
 add caterogy (can have many books)   

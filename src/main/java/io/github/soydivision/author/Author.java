@@ -18,7 +18,6 @@ public class Author {
     private String name;
 
     @ManyToMany
-
     @JsonManagedReference // This is to avoid infinite loop. This is forward part of reference.
     @JoinTable(
             name = "AUTHOR_BOOK_MAPPING",

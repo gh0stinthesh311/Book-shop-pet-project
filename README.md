@@ -22,7 +22,7 @@ API is fairly standard across the entities:
 Author:
 - `GET /api/author/all`: Get all authors
 - `GET /api/author/{id}`: Get an author by ID
-- `POST /api/author`: Create a new author
+- `POST /api/author/save`: Create a new author
 - `PUT /api/author/{id}`: Update an existing author  
 - `DELETE /api/author/{id}`: Delete an author
 - `POST /api/author/{authorId}/book/{bookId}`: Add a book to an author  
@@ -32,7 +32,14 @@ Book:
 - `POST /api/book`: Create a new book  
 - `PUT /api/book/{id}`: Update an existing book  
 - `DELETE /api/book/{id}`: Delete a book  
-
+Customer:
+- `GET /api/customer/all`: Get all customers
+- `GET /api/customer/{id}`: Get a customer by ID
+- `POST /api/customer/save`: Create a new customer
+- `PUT /api/customer/{id}`: Update an existing customer
+- `DELETE /api/customer/{id}`: Delete a customer
+- `POST /api/customer/{customerId}/book/{bookId}`: Add a book to a customer
+- 
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
