@@ -1,4 +1,4 @@
-package io.github.soydivision;
+package io.github.gh0stinthesh311;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

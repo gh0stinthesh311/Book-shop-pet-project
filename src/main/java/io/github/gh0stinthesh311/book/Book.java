@@ -1,10 +1,9 @@
-package io.github.soydivision.book;
+package io.github.gh0stinthesh311.book;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import io.github.soydivision.author.Author;
-import io.github.soydivision.book.category.Category;
-import io.github.soydivision.order.Order;
+import io.github.gh0stinthesh311.author.Author;
+import io.github.gh0stinthesh311.book.category.Category;
+import io.github.gh0stinthesh311.order.Order;
 import jakarta.persistence.*;
 
 import java.util.List;

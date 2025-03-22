@@ -1,4 +1,4 @@
-package io.github.soydivision.author;
+package io.github.gh0stinthesh311.author;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

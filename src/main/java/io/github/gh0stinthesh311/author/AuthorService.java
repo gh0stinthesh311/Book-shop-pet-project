@@ -1,4 +1,4 @@
-package io.github.soydivision.author;
+package io.github.gh0stinthesh311.author;
 
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;

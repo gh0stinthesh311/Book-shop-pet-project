@@ -1,4 +1,4 @@
-package io.github.soydivision.author;
+package io.github.gh0stinthesh311.author;
 
 public class AuthorDTO {
     private String name;

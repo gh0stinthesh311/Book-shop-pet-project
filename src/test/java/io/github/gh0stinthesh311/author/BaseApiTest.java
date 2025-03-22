@@ -1,4 +1,4 @@
-package io.github.soydivision.author;
+package io.github.gh0stinthesh311.author;
 
 import io.restassured.RestAssured;
 import org.testng.annotations.BeforeTest;

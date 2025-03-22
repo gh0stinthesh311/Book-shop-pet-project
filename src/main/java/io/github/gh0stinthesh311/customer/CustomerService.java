@@ -1,4 +1,4 @@
-package io.github.soydivision.customer;
+package io.github.gh0stinthesh311.customer;
 
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;

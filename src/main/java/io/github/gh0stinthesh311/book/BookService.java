@@ -1,4 +1,4 @@
-package io.github.soydivision.book;
+package io.github.gh0stinthesh311.book;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

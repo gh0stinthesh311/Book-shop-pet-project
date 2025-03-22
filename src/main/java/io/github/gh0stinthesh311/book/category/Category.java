@@ -1,4 +1,4 @@
-package io.github.soydivision.book.category;
+package io.github.gh0stinthesh311.book.category;
 
 import jakarta.persistence.*;
 

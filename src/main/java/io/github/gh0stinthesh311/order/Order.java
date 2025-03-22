@@ -1,6 +1,6 @@
-package io.github.soydivision.order;
+package io.github.gh0stinthesh311.order;
 
-import io.github.soydivision.book.Book;
+import io.github.gh0stinthesh311.book.Book;
 import jakarta.persistence.*;
 
 import java.util.List;

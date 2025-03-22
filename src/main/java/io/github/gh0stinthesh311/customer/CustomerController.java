@@ -1,4 +1,4 @@
-package io.github.soydivision.customer;
+package io.github.gh0stinthesh311.customer;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
