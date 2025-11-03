@@ -2,7 +2,6 @@ package io.github.gh0stinthesh311.book;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import io.github.gh0stinthesh311.author.Author;
-import io.github.gh0stinthesh311.book.category.Category;
 import io.github.gh0stinthesh311.order.Order;
 import jakarta.persistence.*;
 
@@ -22,11 +21,11 @@ public class Book {
     @Column
     private int price;
 
-    @ManyToOne
-    @JoinTable(name = "BOOK_CATEGORY_MAPPING",
-            joinColumns = @JoinColumn(name = "book_id"),
-            inverseJoinColumns = @JoinColumn(name = "category_id"))
-    private Category category;
+//    @ManyToOne
+//    @JoinTable(name = "BOOK_CATEGORY_MAPPING",
+//            joinColumns = @JoinColumn(name = "book_id"),
+//            inverseJoinColumns = @JoinColumn(name = "category_id"))
+//    private Category category;
 
     @ManyToMany
 //    @JsonIgnore

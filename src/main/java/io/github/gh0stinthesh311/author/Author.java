@@ -52,11 +52,7 @@ public class Author {
         return books;
     }
 
-//    public void setBooks(List<Book> books) {
-//        this.books = books;
-//    }
-
-    public void setBook(List<Book> books) {
+    public void setBooks(List<Book> books) {
         this.books = books;
     }
 

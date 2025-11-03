@@ -1,11 +1,49 @@
 package io.github.gh0stinthesh311.author;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class AuthorDTO {
+    private Long id;
     private String name;
+
+    public AuthorDTO() {
+    }
+
+//    public AuthorDTO(Long id, String name, List<BookDTO> books) {
+//        this.id = id;
+//        this.name = name;
+//        this.books = books;
+//    }
+
+    public AuthorDTO(Long id, String name) {
+        this.id = id;
+        this.name = name;
+    }
 
     public AuthorDTO(String name) {
         this.name = name;
     }
+
+//    public AuthorDTO(String name) {
+//        this.name = name;
+//    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+//    public List<BookDTO> getBooks() {
+//        return books;
+//    }
+//
+//    public void setBooks(List<BookDTO> books) {
+//        this.books = books;
+//    }
 
     public String getName() {
         return name;
@@ -16,30 +54,3 @@ public class AuthorDTO {
     }
 }
 
-//Constructor Overloading
-//
-//Why:
-//It's simple to implement and avoids adding unnecessary complexity.
-//Fits well when there are a few variations in the data returned by the DTO.
-//Easy to understand and modify as your project evolves.
-//
-//public class UserDTO {
-//    private String name;
-//    private String email;
-//    private String phoneNumber;
-//
-//    // Constructor for basic info
-//    public UserDTO(String name, String email) {
-//        this.name = name;
-//        this.email = email;
-//    }
-//
-//    // Constructor for detailed info
-//    public UserDTO(String name, String email, String phoneNumber) {
-//        this.name = name;
-//        this.email = email;
-//        this.phoneNumber = phoneNumber;
-//    }
-//
-//    // Getters and setters
-//}

@@ -13,15 +13,17 @@ public class AuthorService {
     AuthorRepository authorRepository;
 
     public List<AuthorDTO> getAllAuthors() {
-        List<AuthorDTO> allAuthorsListDTO = new ArrayList<>();
         List<Author> allAuthors = authorRepository.findAll();
-        for (Author author : allAuthors) {
-            allAuthorsListDTO.add(new AuthorDTO(author.getName()));
-        }
-        return allAuthorsListDTO;
+        AuthorMapper authorMapper = new AuthorMapper();
+        return authorMapper.toDtoList(allAuthors);
     }
 
     public AuthorDTO getAuthorById(Long id) {
+        Author author = authorRepository.findById(id).orElseThrow(() -> new EntityNotFoundException("No such data"));
+        return new AuthorDTO(author.getName());
+    }
+
+    public AuthorDTO getAuthorBooksById(Long id) {
         Author author = authorRepository.findById(id).orElseThrow(() -> new EntityNotFoundException("No such data"));
         return new AuthorDTO(author.getName());
     }
