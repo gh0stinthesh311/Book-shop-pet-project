@@ -5,19 +5,6 @@ INSERT INTO authors (id, name) VALUES (3, 'F. Scott Fitzgerald');
 INSERT INTO authors (id, name) VALUES (4, 'J.K. Rowling');
 INSERT INTO authors (id, name) VALUES (5, 'Jane Austen');
 
--- Insert customers
-INSERT INTO customers (name, email) VALUES
-('John Doe', 'johndoe@example.com'),
-('Jane Smith', 'janesmith@example.com'),
-('Robert Brown', 'robert.brown@example.net'),
-('Emily Davis', 'emily.davis@example.org'),
-('Michael Wilson', 'michael.wilson@example.com'),
-('Sarah Johnson', 'sarah.johnson@example.co'),
-('David Taylor', 'david.taylor@example.org'),
-('Laura Martinez', 'laura.martinez@example.net'),
-('James Anderson', 'james.anderson@example.edu'),
-('Linda Thompson', 'linda.thompson@example.com');
-
 -- Insert books
 INSERT INTO books (title, author_id, price) VALUES ('To Kill a Mockingbird', 1, 15);
 INSERT INTO books (title, author_id, price) VALUES ('Go Set a Watchman', 1, 20);
@@ -37,7 +24,23 @@ INSERT INTO categories (category) VALUES ('FANTASY');
 INSERT INTO categories (category) VALUES ('FICTION');
 
 -- This query populates AUTHOR_BOOK_MAPPING (which is join table) by associating authors with their corresponding books.
+-- Following should be managed by JPA, meaning JPA should create join table, not this script
 INSERT INTO AUTHOR_BOOK_MAPPING (author_id, book_id)
 SELECT a.id, b.id
 FROM authors a
 JOIN books b ON a.id = b.author_id;
+
+-- Insert customers POSTPONED
+--INSERT INTO customers (name, email) VALUES
+--('John Doe', 'johndoe@example.com'),
+--('Jane Smith', 'janesmith@example.com'),
+--('Robert Brown', 'robert.brown@example.net'),
+--('Emily Davis', 'emily.davis@example.org'),
+--('Michael Wilson', 'michael.wilson@example.com'),
+--('Sarah Johnson', 'sarah.johnson@example.co'),
+--('David Taylor', 'david.taylor@example.org'),
+--('Laura Martinez', 'laura.martinez@example.net'),
+--('James Anderson', 'james.anderson@example.edu'),
+--('Linda Thompson', 'linda.thompson@example.com');
+
+

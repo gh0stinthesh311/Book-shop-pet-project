@@ -11,7 +11,7 @@ import java.util.List;
 public class Author {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
+//    @Column(name = "id")
     private long id;
 
     @Column
@@ -23,7 +23,7 @@ public class Author {
             name = "AUTHOR_BOOK_MAPPING",
             joinColumns = @JoinColumn(name = "author_id"),
             inverseJoinColumns = @JoinColumn(name = "book_id"))
-    private List<Book> books;// no need to specify implementation, Hibernate will use its own
+    private List<Book> books; // no need to specify implementation, Hibernate will use its own
 
     public Author() {
     }
