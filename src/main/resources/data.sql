@@ -17,8 +17,8 @@ INSERT INTO books (title, author_id, price) VALUES ('Harry Potter and the Chambe
 INSERT INTO books (title, author_id, price) VALUES ('Pride and Prejudice', 5, 18);
 INSERT INTO books (title, author_id, price) VALUES ('Sense and Sensibility', 5, 16);
 INSERT INTO books (title, author_id, price) VALUES ('Emma', 5, 19);
-INSERT INTO books (title, author_id, price) VALUES ('This Side of Paradise', 3, 18); -- Additional book for F. Scott Fitzgerald
-INSERT INTO books (title, author_id, price) VALUES ('Harry Potter and the Prisoner of Azkaban', 4, 27); -- Additional book for J.K. Rowling
+INSERT INTO books (title, author_id, price) VALUES ('This Side of Paradise', 3, 18);
+INSERT INTO books (title, author_id, price) VALUES ('Harry Potter and the Prisoner of Azkaban', 4, 27);
 
 INSERT INTO categories (category) VALUES ('FANTASY');
 INSERT INTO categories (category) VALUES ('FICTION');

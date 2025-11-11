@@ -12,7 +12,6 @@ import java.util.List;
 public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-//    @Column(name = "id")
     private long id;
 
     @Column
@@ -21,27 +20,13 @@ public class Book {
     @Column
     private int price;
 
-//    @ManyToOne
-//    @JoinTable(name = "BOOK_CATEGORY_MAPPING",
-//            joinColumns = @JoinColumn(name = "book_id"),
-//            inverseJoinColumns = @JoinColumn(name = "category_id"))
-//    private Category category;
-
     @ManyToMany
-//    @JsonIgnore
     @JsonBackReference // This is to avoid infinite loop. This is backward part of reference.
     @JoinTable(
             name = "AUTHOR_BOOK_MAPPING",
             joinColumns = @JoinColumn(name = "book_id"),
             inverseJoinColumns = @JoinColumn(name = "author_id"))
     private List<Author> authors;
-
-    @ManyToMany
-    @JoinTable(
-            name = "ORDER_BOOK_MAPPING",
-            joinColumns = @JoinColumn(name = "book_id"),
-            inverseJoinColumns = @JoinColumn(name = "order_id"))
-    private List<Order> orders; // Hibernate uses its own specific implementations of collection types. No need to explicitly mention one here.
 
 
     public Book() {
@@ -81,13 +66,5 @@ public class Book {
 
     public void setAuthors(List<Author> authors) {
         this.authors = authors;
-    }
-
-    public List<Order> getOrders() {
-        return orders;
-    }
-
-    public void setOrders(List<Order> orders) {
-        this.orders = orders;
     }
 }

@@ -11,7 +11,7 @@ import java.util.List;
 public class Author {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-//    @Column(name = "id")
+    @Column(name = "id")
     private long id;
 
     @Column
@@ -57,9 +57,13 @@ public class Author {
     }
 
     public void addBook(Book book) {
-        if (!this.books.contains(book)) {
-            this.books.add(book);
-        }
+        books.add(book);
+        book.getAuthors().add(this);
+    }
+
+    public void removeBook(Book book) {
+        books.remove(book);
+        book.getAuthors().remove(this);
     }
 }
 
