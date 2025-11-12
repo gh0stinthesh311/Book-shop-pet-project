@@ -55,29 +55,32 @@ INSERT INTO customers (name, email) VALUES
 ('James Anderson', 'james.anderson@example.edu'),
 ('Linda Thompson', 'linda.thompson@example.com');
 
---CREATE TABLE categories (
---    id INT AUTO_INCREMENT PRIMARY KEY,
---    category VARCHAR(255) NOT NULL
---);
+CREATE TABLE AUTHOR_BOOK_MAPPING (
+    author_id INT,
+    book_id INT,
+    PRIMARY KEY (author_id, book_id),
+    FOREIGN KEY (author_id) REFERENCES authors(id),
+    FOREIGN KEY (book_id) REFERENCES books(id)
+);
 
---CREATE TABLE AUTHOR_BOOK_MAPPING (
---    author_id INT,
---    book_id INT,
---    PRIMARY KEY (author_id, book_id),
---    FOREIGN KEY (author_id) REFERENCES authors(id),
---    FOREIGN KEY (book_id) REFERENCES books(id)
---);
+--Running this will populate join table
+INSERT INTO AUTHOR_BOOK_MAPPING (author_id, book_id) VALUES (1, 1);
+INSERT INTO AUTHOR_BOOK_MAPPING (author_id, book_id) VALUES (1, 2);
 
+INSERT INTO AUTHOR_BOOK_MAPPING (author_id, book_id) VALUES (2, 3);
+INSERT INTO AUTHOR_BOOK_MAPPING (author_id, book_id) VALUES (2, 4);
 
+INSERT INTO AUTHOR_BOOK_MAPPING (author_id, book_id) VALUES (3, 5);
+INSERT INTO AUTHOR_BOOK_MAPPING (author_id, book_id) VALUES (3, 6);
+INSERT INTO AUTHOR_BOOK_MAPPING (author_id, book_id) VALUES (3, 12);
 
---INSERT INTO categories (category) VALUES ('FANTASY');
---INSERT INTO categories (category) VALUES ('FICTION');
+INSERT INTO AUTHOR_BOOK_MAPPING (author_id, book_id) VALUES (4, 7);
+INSERT INTO AUTHOR_BOOK_MAPPING (author_id, book_id) VALUES (4, 8);
+INSERT INTO AUTHOR_BOOK_MAPPING (author_id, book_id) VALUES (4, 13);
 
--- This query populates AUTHOR_BOOK_MAPPING (which is join table) by associating authors with their corresponding books.
--- Following should be managed by JPA, meaning JPA should create join table, not this script
---INSERT INTO AUTHOR_BOOK_MAPPING (author_id, book_id)
---SELECT a.id, b.id
---FROM authors a
---JOIN books b ON a.id = b.author_id;
+INSERT INTO AUTHOR_BOOK_MAPPING (author_id, book_id) VALUES (5, 9);
+INSERT INTO AUTHOR_BOOK_MAPPING (author_id, book_id) VALUES (5, 10);
+INSERT INTO AUTHOR_BOOK_MAPPING (author_id, book_id) VALUES (5, 11);
+
 
 
